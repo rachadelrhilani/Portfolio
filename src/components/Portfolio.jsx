@@ -58,14 +58,14 @@ const Portfolio = ({Portref}) => {
             title: 'Projet de Gestion des mots de passe et guides utilisateurs',
             images: [Acceuil,login,Serveurs,resaux,sys],
             description: 'Le projet vise à développer une application de gestion de mots de passe permettant aux utilisateurs de stocker, organiser et sécuriser leurs identifiants de connexion et informations sensibles dans un seul endroit. Grâce à un système de cryptage avancé, les données restent protégées contre tout accès non autorisé,Technologies utilisées : HTML, CSS, Bootstrap 5, JS, PHP, Laravel.',
-            githubLink: 'https://github.com/username/projet1'
+            githubLink: 'https://github.com/rachadelrhilani/Projet-de-gestion-des-mots-de-passe-et-guides-utilisateurs'
         },
         {
             id: 1,
             title: 'Projet de fill rouge (Front-end)',
             images: [lending,loginfillrouge,Mission,sommesnous,vote,event,blog],
             description: "Le projet Fil Rouge est conçu pour créer une plateforme innovante et interactive, visant à rassembler une communauté engagée autour d'objectifs communs. Grâce à une interface intuitive et des fonctionnalités variées, notre projet met en avant des valeurs de transparence, de participation et de collaboration. Il permet aux utilisateurs de se connecter, d'interagir, de s'informer, et de contribuer activement aux décisions importantes.. Technologies utilisées : HTML, CSS, Bootstrap 5,JavaScript, PHP.",
-            githubLink: 'https://github.com/username/projet2'
+            githubLink: 'https://github.com/rachadelrhilani/Projet-fill-rouge-front-end-'
         }
     ];
 
