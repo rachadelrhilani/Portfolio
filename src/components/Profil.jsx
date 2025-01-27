@@ -40,14 +40,12 @@ const Profil = ({ Profilref }) => {
             </div>
             <div class="profile-content">
                 <div class="profile-image">
-                    <img src="./photo.png" alt="Profile Picture" /> {/* Affiche l'image du profil */}
+                    <img src="./Photo-Personnel.jpeg" alt="Profile Picture" /> {/* Affiche l'image du profil */}
                 </div>
                 <div class="profile-text">
                     <h2>EL RHILANI RACHAD</h2>
                     <p>
-                        Titulaire d'un baccalauréat et d'un bac+2 en développement digital, option web full-stack.
-                        J'ai acquis des compétences solides en développement web et effectué un stage d'un mois dans
-                        la Province de Safi, ce qui m'a permis de renforcer mes connaissances en technologies front-end et back-end.
+                        Titulaire d'un baccalauréat et d'un bac+2 en développement digital, option web full-stack. J'ai acquis des compétences solides en développement web et effectué un stage d'un mois dans la Province de Safi, ce qui m'a permis de renforcer mes connaissances en technologies front-end et back-end. Par ailleurs, j'ai également réalisé un stage de deux mois chez UniversalVisa à Agadir, au cours duquel j'ai développé le site MackensieConsulting, consolidant ainsi mon expertise en développement de sites web professionnels.
                     </p>
                 </div>
             </div>

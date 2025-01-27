@@ -1,9 +1,14 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'animate.css'; // la bibliothèque animate.css pour les animations CSS
+/* images de Projet MackensieConsulting */
+import home from '../Mackensie/acceuil1.png';
+import Consulting from '../Mackensie/Consulting-en-ligne.png';
+import Notremetier from '../Mackensie/Notre-metier.png';
+import poli from '../Mackensie/poli.png';
 /* images de Projet fill rouge */
 import lending from '../fill rouge projet/lending.png';
 import loginfillrouge from '../fill rouge projet/loginfillrouge.png';
@@ -18,9 +23,9 @@ import Serveurs from '../images/Serveurs.jpg';
 import login from '../images/login.jpg';
 import resaux from '../images/résaux.jpg';
 import sys from '../images/sys_information.jpg'
-  // Style de la fenêtre modale
-  Modal.setAppElement('#root'); // Assure l'accessibilité de la modale
-const Portfolio = ({Portref}) => {
+// Style de la fenêtre modale
+Modal.setAppElement('#root'); // Assure l'accessibilité de la modale
+const Portfolio = ({ Portref }) => {
     // Utiliser un état pour contrôler la visibilité du profil dans la fenêtre
     const [isVisible, setIsVisible] = useState(false);
 
@@ -47,7 +52,7 @@ const Portfolio = ({Portref}) => {
             }
         };
     }, [Portref]); // Le hook s'active lorsque Profilref change
-  
+
     // État pour la fenêtre modale
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
@@ -56,16 +61,33 @@ const Portfolio = ({Portref}) => {
         {
             id: 2,
             title: 'Projet de Gestion des mots de passe et guides utilisateurs',
-            images: [Acceuil,login,Serveurs,resaux,sys],
+            images: [Acceuil, login, Serveurs, resaux, sys],
             description: 'Le projet vise à développer une application de gestion de mots de passe permettant aux utilisateurs de stocker, organiser et sécuriser leurs identifiants de connexion et informations sensibles dans un seul endroit. Grâce à un système de cryptage avancé, les données restent protégées contre tout accès non autorisé,Technologies utilisées : HTML, CSS, Bootstrap 5, JS, PHP, Laravel.',
             githubLink: 'https://github.com/rachadelrhilani/Projet-de-gestion-des-mots-de-passe-et-guides-utilisateurs'
         },
         {
             id: 1,
             title: 'Projet de fill rouge (Front-end)',
-            images: [lending,loginfillrouge,Mission,sommesnous,vote,event,blog],
+            images: [lending, loginfillrouge, Mission, sommesnous, vote, event, blog],
             description: "Le projet Fil Rouge est conçu pour créer une plateforme innovante et interactive, visant à rassembler une communauté engagée autour d'objectifs communs. Grâce à une interface intuitive et des fonctionnalités variées, notre projet met en avant des valeurs de transparence, de participation et de collaboration. Il permet aux utilisateurs de se connecter, d'interagir, de s'informer, et de contribuer activement aux décisions importantes.. Technologies utilisées : HTML, CSS, Bootstrap 5,JavaScript, PHP.",
             githubLink: 'https://github.com/rachadelrhilani/Projet-fill-rouge-front-end-'
+        }
+        ,
+        {
+            id: 3,
+            title: 'MackensieConsulting (WordPress)',
+            images: [home, Consulting, Notremetier, poli],
+            description: `MackensieConsulting : Plateforme de Consulting en Ligne
+
+Le projet MackensieConsulting est un site web de consulting professionnel, conçu avec WordPress et entièrement adapté aux besoins des ministères, entreprises et investisseurs. Son objectif principal est de faciliter les échanges et les collaborations en offrant une solution moderne et accessible pour la prise de rendez-vous en ligne.
+
+Grâce à l'intégration du plugin Bookly, le site permet :
+
+La réservation simplifiée de rendez-vous consulting, avec des créneaux horaires adaptés.
+Une gestion efficace des plannings pour les consultants et les utilisateurs.
+Une expérience utilisateur fluide, alliant design intuitif et fonctionnalités performantes.
+Ce projet met en avant mon expertise dans la création de sites web dynamiques, en combinant les possibilités puissantes de WordPress avec des solutions spécifiques telles que Bookly pour répondre aux besoins professionnels des acteurs du secteur public et privé.`,
+            githubLink: 'https://mackensieconsulting.com/'
         }
     ];
 
@@ -132,7 +154,7 @@ const Portfolio = ({Portref}) => {
                             rel="noopener noreferrer"
                             className="github-link"
                         >
-                            Voir le code source sur GitHub
+                            Voir le projet
                         </a>
                         <button onClick={closeModal} className="close-button">Fermer</button>
                     </div>

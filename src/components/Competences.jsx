@@ -6,12 +6,14 @@ import jsIcon from '../images/js.png';
 import phpIcon from '../images/php.png';
 import sqlIcon from '../images/sql.png';
 import reactIcon from '../images/react.png';
+import wordIcon from '../images/wordpress.png';
 import laravelIcon from '../images/laravel.png';
 const skillData = [
     { name: 'HTML', icon: htmlIcon, percentage: 90 },
     { name: 'CSS', icon: cssIcon, percentage: 85 },
     { name: 'JavaScript', icon: jsIcon, percentage: 80 },
     { name: 'PHP', icon: phpIcon, percentage: 75 },
+    { name: 'WordPress', icon: wordIcon, percentage: 85 },
     { name: 'SQL', icon: sqlIcon, percentage: 70 },
     { name: 'React', icon: reactIcon, percentage: 85 },
     { name: 'Laravel', icon: laravelIcon, percentage: 80 },

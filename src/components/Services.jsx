@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Services = ({ Servref }) => {
     // Utiliser un état pour contrôler la visibilité du profil dans la fenêtre
@@ -37,8 +37,7 @@ const Services = ({ Servref }) => {
                         <div className="card-body">
                             <h5 className="card-title">Front-End</h5>
                             <p className="card-text">
-                                Développement d'interfaces utilisateur interactives et modernes
-                                utilisant les dernières technologies telles que HTML, CSS, JavaScript,et des bibliothèques comme React.js.
+                                Création de sites web utilisant les dernières technologies telles que HTML, CSS, JavaScript, ainsi que des bibliothèques comme React.js, et des systèmes de gestion de contenu puissants tels que WordPress. Ces solutions permettent de concevoir des interfaces à la fois dynamiques, intuitives et adaptables aux besoins des utilisateurs
                             </p>
                         </div>
                     </div>
