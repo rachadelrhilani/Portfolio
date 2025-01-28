@@ -48,8 +48,9 @@ ul li {
 /*********Header**************/
 .header-wraper {
   position: relative;
-  background-image: url('../public/back.jpg');
+  background-image: url('../public/back.png');
   background-size: cover;
+  background-attachment: fixed;
   /* L'image couvre toute la zone */
   background-position: center;
   /* Centre l'image */

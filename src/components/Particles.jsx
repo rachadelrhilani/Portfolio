@@ -20,7 +20,7 @@ function ParticleNetwork() {
             value: 50, // Nombre de particules
             density: {
               enable: true, // Activer la densité
-              value_area: 500, // Zone de densité
+              value_area: 550, // Zone de densité
             },
           },
           links: {
@@ -49,11 +49,11 @@ function ParticleNetwork() {
         interactivity: {
           events: {
             onHover: {
-              enable: false, // Activer l'interaction au survol
+              enable: true, // Activer l'interaction au survol
               mode: "repulse", // Mode d'effet au survol (repousse les particules)
             },
             onClick: {
-              enable: false, // Désactiver l'interaction au clic
+              enable: true, // Désactiver l'interaction au clic
             },
           },
         },
