@@ -31,27 +31,29 @@ const Portfolio = ({ Portref }) => {
 
     // Utilisation de useEffect pour observer la visibilité du composant
     useEffect(() => {
-        // Créer un IntersectionObserver pour surveiller si l'élément est visible
+        const Port = Portref.current;
+    
         const observer = new IntersectionObserver(
             ([entry]) => {
-                // Mettre à jour l'état en fonction de la visibilité de l'élément
-                setIsVisible(entry.isIntersecting);
+                if (entry.isIntersecting && !isVisible) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target); // Stopper l’observation
+                }
             },
-            { threshold: 1 } // Le seuil à 50% signifie que l'animation s'active quand 50% du profil est visible
+            { threshold: 0.030 } // Animation déclenchée uniquement si 100% visible
         );
-
-        // Observer l'élément référencé par Portref si celui-ci est défini
-        if (Portref.current) {
-            observer.observe(Portref.current);
+    
+        if (Port) {
+            observer.observe(Port);
         }
-
-        // Nettoyage : arrêter l'observation lorsque le composant est démonté ou si Portref change
+    
         return () => {
-            if (Portref.current) {
-                observer.unobserve(Portref.current);
+            if (Port) {
+                observer.unobserve(Port);
             }
         };
-    }, [Portref]); // Le hook s'active lorsque Profilref change
+    }, [Portref, isVisible]);
+    
 
     // État pour la fenêtre modale
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -113,7 +115,7 @@ Ce projet met en avant mon expertise dans la création de sites web dynamiques, 
     };
 
     return (
-        <div className={`portfolio-container ${isVisible && 'animate__animated animate__fadeIn'}`} ref={Portref}>
+        <div className={`portfolio-container ${isVisible && 'animate__animated animate__fadeInLeft'}`} ref={Portref}>
             <h2>Mes Projets</h2>
             <div className="project-list">
                 {projects.map((project) => (

@@ -4,31 +4,32 @@ const Services = ({ Servref }) => {
     // Utiliser un état pour contrôler la visibilité du profil dans la fenêtre
     const [isVisible, setIsVisible] = useState(false);
 
-    // Utilisation de useEffect pour observer la visibilité du composant
     useEffect(() => {
-        // Créer un IntersectionObserver pour surveiller si l'élément est visible
+        const Serv = Servref.current;
+    
         const observer = new IntersectionObserver(
             ([entry]) => {
-                // Mettre à jour l'état en fonction de la visibilité de l'élément
-                setIsVisible(entry.isIntersecting);
+                if (entry.isIntersecting && !isVisible) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target); // Stopper l’observation
+                }
             },
-            { threshold: 0.5 } // Le seuil à 50% signifie que l'animation s'active quand 50% du profil est visible
+            { threshold: 0.030 }
         );
-
-        // Observer l'élément référencé par Servref si celui-ci est défini
-        if (Servref.current) {
-            observer.observe(Servref.current);
+    
+        if (Serv) {
+            observer.observe(Serv);
         }
-
-        // Nettoyage : arrêter l'observation lorsque le composant est démonté ou si Servref change
+    
         return () => {
-            if (Servref.current) {
-                observer.unobserve(Servref.current);
+            if (Serv) {
+                observer.unobserve(Serv);
             }
         };
-    }, [Servref]); // Le hook s'active lorsque Profilref change
+    }, [Servref, isVisible]);
+    
     return (
-        <div className={`container services ${isVisible && 'animate__animated animate__bounceIn'}`} ref={Servref}>
+        <div className={`container services ${isVisible && 'animate__animated animate__zoomIn'}`} ref={Servref}>
             <h2 className="text-center">MES Services</h2>
             <div className="row section">
                 {/* Card Front-End */}
